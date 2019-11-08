@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+         
+<head>
+  <title>Sarahvannah Farms</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src='angular.js'></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></head>
+
+<!--------------------------------top nav bar-------------------------------->
+<body ng-app="POSTapp">
+  <div >
+    <div class= "top-nav-bar">
+    <div class= "search-box">
+      <i class="fa fa-bars" aria-hidden="true" id="menu-btn" onclick="openmenu()"></i>
+      <i class="fa fa-times" aria-hidden="true" id="close-btn" onclick="closemenu()"></i>
+      <a href="index.html"><img src="SV img\Copy of Sarahvanna Farms.png" class="logo"></a>
+    
+    <span></span>
+  </div>
+  <div class="menu-bar">
+    <ul>
+      <li><a href="shoppingcart.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>cart</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Log In</a></li>
+    </ul>
+  </div>
+  </div>
+  <div>
+    <!-----------------------------------side menu------------------------------------>
+
+<section class="header">
+    <div class="side-menu" id="side-menu">
+      <ul>
+        <li class="side-item"><a href="#!FindCustomer">Search Customers</a></li>
+        <li class="side-item"><a href="#!UpdateCustomer">Update Customer</a></li>
+
+      </ul>
+    </div>
+</section>
+    <div ng-view=""></div>
+<!--------------------------Search Customer Form---------------------->
+<script type="text/ng-template" id="test.html">
+  <p>this is a test</p>
+  </script>
+<script type="text/ng-template" id="FindCustomer.html">
+ 
+      <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <div class="card">
+                      <div class="card-header">Search Customers</div>
+                      <div class="card-body">
+                          
+                          <form class="form-horizontal"accept-charset="UTF-8">
+  
+                              <div class="form-group">
+                                  <label for="first_name" class="cols-sm-2 control-label">First Name</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="first_name" name="first_name" id="first_name" placeholder="First Name" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="last_name" class="cols-sm-2 control-label">Last Name</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="last_name"name="last_name" id="last_name" placeholder="Last Name" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="street_number" class="cols-sm-2 control-label">Street Number</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-home fa" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="street_number"name="street_number" id="street_number" placeholder="Street Number" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="street_name" class="cols-sm-2 control-label">Street Name</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="street_name"name="street_name" id="street_name" placeholder="Street Name" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="city_name" class="cols-sm-2 control-label">City</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></i></span>
+                                          <input type="text" class="form-control" ng-model="city_name"name="city_name" id="city_name" placeholder="City" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="state_name" class="cols-sm-2 control-label">State</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="state_name"name="state_name" id="state_name" placeholder="State" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="zip_code" class="cols-sm-2 control-label">Zip Code</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-file-archive-o" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="zip_code"name="zip_code" id="zip_code" placeholder="Zip Code" />
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="contact_number" class="cols-sm-2 control-label">Phone Number</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="contact_number"name="contact_number" id="contact_number" placeholder="Phone Number" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="email" class="cols-sm-2 control-label">Email</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control" ng-model="email"name="email" id="email" placeholder="Email" />
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group ">
+                                  <button type="button" value="Submit" data-dismiss= "modal"ng-click="makeURL(first_name,last_name,street_number,street_name,city_name,state_name,zip_code,contact_number,email)"class="btn btn-primary btn-lg btn-block login-button"><a href="#!DisplayCustomer" style="color: white;">Submit</a></button>
+                              </div>
+
+                             
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <table class="SearchCustomer" text-align:center>
+                    <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Street Number</th>
+                  <th>Street Name</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Zip Code</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                    <td colspan="9">
+                    <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+                    </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                <tr ng-repeat="customer in customers">
+                  <td>{{customer.first_name}}</td>
+                  <td>{{customer.last_name}}</td>
+                  <td>{{customer.street_number}}</td>
+                  <td>{{customer.street_name}}</td>
+                  <td>{{customer.city_name}}</td>
+                  <td>{{customer.state_name}}</td>
+                  <td>{{customer.zip_code}}</td>
+                  <td>{{customer.contact_number}}</td>
+                  <td>{{customer.email}}</td>
+                 
+                </tr>
+            </tbody>
+              </table>
+
+
+
+</script>
+<!------------------------------Diplay Customer Search---------------->
+
+
+  <!---------------------------------------Update Customer----------------------------->
+  <script type="text/ng-template" id="UpdateCustomer.html">
+ 
+    <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Update Customers</div>
+                    <div class="card-body">
+                        
+                        <form class="form-horizontal"accept-charset="UTF-8">
+
+                            <div class="form-group">
+                                <label for="first_name" class="cols-sm-2 control-label">First Name</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="first_name" name="first_name" id="first_name" placeholder="First Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name" class="cols-sm-2 control-label">Last Name</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="last_name"name="last_name" id="last_name" placeholder="Last Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="street_number" class="cols-sm-2 control-label">Street Number</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-home fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="street_number"name="street_number" id="street_number" placeholder="Street Number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="street_name" class="cols-sm-2 control-label">Street Name</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="street_name"name="street_name" id="street_name" placeholder="Street Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city_name" class="cols-sm-2 control-label">City</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></i></span>
+                                        <input type="text" class="form-control" ng-model="city_name"name="city_name" id="city_name" placeholder="City" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="state_name" class="cols-sm-2 control-label">State</label>
+                                <div class="cols-sm-10">
+                                
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="state_name"name="state_name" id="state_name" placeholder="State" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip_code" class="cols-sm-2 control-label">Zip Code</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-file-archive-o" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="zip_code"name="zip_code" id="zip_code" placeholder="Zip Code" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact_number" class="cols-sm-2 control-label">Phone Number</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="contact_number"name="contact_number" id="contact_number" placeholder="Phone Number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="cols-sm-2 control-label">Email</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" ng-model="email"name="email" id="email" placeholder="Email" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <button type="button" value="Submit" data-dismiss= "modal"ng-click="makeURL(first_name,last_name,street_number,street_name,city_name,state_name,zip_code,contact_number,email)"class="btn btn-primary btn-lg btn-block login-button"><a href="#!DisplayCustomer" style="color:white;">Submit</a></button>
+                            </div>
+{{msg}}
+                           
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <!-- /#page-content-wrapper -->
+  <!-- /#wrapper -->
+  <!-- Bootstrap core JavaScript -->
+
+
+  <!-- Menu Toggle Script -->
+
+  <script src='angular.js'></script>
+<script>
+  var app=angular.module("POSTapp",['ngRoute']);
+  app.config(function($routeProvider){
+      $routeProvider
+          .when('/FindCustomer',{
+              templateUrl:'FindCustomer.html',
+              controller: 'FindCustomer'
+          })
+          .when('/DisplayCustomer',{
+              templateUrl:'DisplayCustomer.html',
+              controller: 'FindCustomer'
+          })
+          .when('/UpdateCustomer',{
+              templateUrl:'UpdateCustomer.html',
+              controller: 'UpdateCustomer'
+          })
+          .otherwise({
+              redirectTo: '/FindCustomer'
+          });
+  });
+
+  //<!-------------------------------------Find Customer Controller------------------------->
+    
+
+     
+      app.controller('FindCustomer', function($scope,$http){
+      $scope.first_name = '';
+      $scope.last_name = '';
+      $scope.street_name = '';
+      $scope.street_number = '';
+      $scope.city_name = '';
+      $scope.state_name = '';
+      $scope.zip_code = '';
+      $scope.contact_number= '';
+      $scope.email= '';
+      
+      $scope.makeURL = function(first_name,last_name,street_number,street_name,city_name,state_name,zip_code,contact_number,email){
+      var url = 'http://localhost:8080/FindCustomer?first_name='+first_name+'&last_name='+last_name+'&street_number='+street_number+
+      '&street_name='+street_name+'&city_name='+city_name+'&state_name='+state_name+'&zip_code='
+      +zip_code+'&contact_number='+contact_number+'&email='+email
+
+          
+      console.log(url);
+      $http.get(url).then(function (response) {
+
+        $scope.customers=response.data;
+
+      });
+      };
+      
+      });
+
+//<!-------------------------------------Update Customer Controller------------------------->
+    
+
+     
+       app.controller('UpdateCustomer', function($scope,$http){
+       $scope.first_name = '';
+       $scope.last_name = '';
+       $scope.street_name = '';
+       $scope.street_number = '';
+       $scope.city_name = '';
+       $scope.state_name = '';
+       $scope.zip_code = '';
+       $scope.contact_number= '';
+       $scope.email= '';
+           
+       $scope.makeURL = function(first_name,last_name,street_number,street_name,city_name,state_name,zip_code,contact_number,email){
+       var url = 'http://localhost:8080/Updatecustomer?first_name='+first_name+'&last_name='+last_name+'&street_number='+street_number+
+       '&street_name='+street_name+'&city_name='+city_name+'&state_name='+state_name+'&zip_code='
+       +zip_code+'&contact_number='+contact_number+'&email='+email
+ 
+           
+       console.log(url);
+       //Call the services
+       
+       $http.put(url).then(function (response) {
+         console.log(response);
+       if (response.data)
+      
+       $scope.update = response.data;
+       $scope.msg = "Put Data Method Executed Successfully!";
+       
+       }, function (response) {
+       
+       $scope.msg = "Success!";
+       
+       $scope.statusval = response.status;
+       
+       $scope.statustext = response.statusText;
+       
+       $scope.headers = response.headers();
+       
+       });
+       
+       };
+       
+       });
+       
+           
+       </script>
+
+  <script>
+    function openmenu()
+    {
+          document.getElementById("side-menu").style.display="block";
+          document.getElementById("menu-btn").style.display="none";
+          document.getElementById("close-btn").style.display="block";
+    }
+    function closemenu()
+    {
+          document.getElementById("side-menu").style.display="none";
+          document.getElementById("menu-btn").style.display="block";
+          document.getElementById("close-btn").style.display="none";
+    }
+  </script>
+
+</body>
+</html>

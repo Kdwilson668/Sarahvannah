@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sarahvannah Farms</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="grid.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></head>
+
+<!--------------------------------top nav bar-------------------------------->
+<body>
+    <div class= "top-nav-bar">
+    <div class= "search-box">
+      <i class="fa fa-bars" aria-hidden="true" id="menu-btn" onclick="openmenu()"></i>
+      <i class="fa fa-times" aria-hidden="true" id="close-btn" onclick="closemenu()"></i>
+      <a href="index.html"><img src="SV img\Copy of Sarahvanna Farms.png" class="logo"></a>
+    
+    <span></span>
+  </div>
+  <div class="menu-bar">
+    <ul>
+      <li><a href="shoppingcart.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>cart</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Log In</a></li>
+    </ul>
+  </div>
+  </div>
+
+<!-----------------------------------side menu------------------------------------>
+
+<section class="header">
+  <div class="side-menu" id="side-menu">
+    <ul>
+      <li class="side-item"><a href="index.html">Home</a></li>
+      <li class="side-item"><a href="soap.html">Our Soaps</a></li>
+      <li class="side-item"><a href="ourstory.html">Our Story</a></li>
+      <li class="side-item"><a href="contact.html">Contact Us</a> </li>
+    </ul>
+  </div>
+
+  <script>
+    function openmenu()
+    {
+          document.getElementById("side-menu").style.display="block";
+          document.getElementById("menu-btn").style.display="none";
+          document.getElementById("close-btn").style.display="block";
+    }
+    function closemenu()
+    {
+          document.getElementById("side-menu").style.display="none";
+          document.getElementById("menu-btn").style.display="block";
+          document.getElementById("close-btn").style.display="none";
+    }
+  </script>
+  <div class="our-story-text">
+    <textfield name=""id="" cols="20"rows="1">Our Story</textfield>
+  </div>
+  <div class="our-story-pic">
+    
+      <img src="SV img\child-with-goat.jpg">
+    
+  </div>
+</section>
+<div class="our-story">
+    
+    <p style="background:white; opacity:70%;"class="text-box"name="" id="" cols="70" rows="18">We started making our soaps and lotions for ourselves as part of our goals to be more self-sufficient. We gave them away to friends and family and they loved them and asked for more, Saravannah Farms was born. <br/><br/>
+
+        We wanted to get back to the basics when we started making our natural soaps and lotions. Free from concerning artificial ingredients and fragrances found in common products.  We wanted to share the natural wonders of goat milk skin care products with everyone and be able to sell them to them at a price everyone could afford.</p>
+  
+</div>
+</section>
+</body>
+<section>
+    
+
+<div class="footer">
+
+    
+        <div class="text-center center-block">
+                <a href="https://www.facebook.com/SarahvannahFarms/?modal=admin_todo_tour"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	              <a href="https://www.instagram.com/sarahvannah_farms/"><i id="social-ig" class="fa fa-instagram fa-3x social" aria-hidden="true"></i></i></a>
+	              <a href="mailto:sarahvannah.farms@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+</div>
+    
+</div>
+
+<br />
+</body>
+</html>

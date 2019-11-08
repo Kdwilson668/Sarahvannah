@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sarahvannah Farms</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="grid.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src='angular.js'></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></head>
+
+<!--------------------------------top nav bar-------------------------------->
+
+<body ng-app="POSTapp">
+    <div class= "top-nav-bar">
+    <div class= "search-box">
+      <i class="fa fa-bars" aria-hidden="true" id="menu-btn" onclick="openmenu()"></i>
+      <i class="fa fa-times" aria-hidden="true" id="close-btn" onclick="closemenu()"></i>
+      <a href="index.html"><img src="SV img\Copy of Sarahvanna Farms.png" class="logo"></a>
+    
+    <span></span>
+  </div>
+  <div class="menu-bar">
+    <ul>
+      <li><a href="shoppingcart.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>cart</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Log In</a></li>
+    </ul>
+  </div>
+  </div>
+ 
+<!-----------------------------------side menu------------------------------------>
+
+<section class="header">
+  <div class="side-menu" id="side-menu">
+    <ul>
+      <li class="side-item"><a href="index.html">Home</a></li>
+      <li class="side-item"><a href="soap.html">Our Soaps</a></li>
+      <li class="side-item"><a href="ourstory.html">Our Story</a></li>
+      <li class="side-item"><a href="contact.html">Contact Us</a> </li>
+    </ul>
+  </div>
+<section class="about-soap">
+  <div>
+    <img src="SV img\about-soap-pic.jpg" style= "width: 1150px; height:600px; margin-left: 20%;">
+    <div style="position:absolute; margin-left:22%; margin-top:-205px;"><div></div>
+    <p class="text-box"style="margin-left:10px;margin-right:10px;margin-top:10px;
+    margin-bottom:10px;font-size:20px;background:white; opacity:70%;">Switching to soap made 
+    with raw goat milk can truly benefit your skin's health. </br>Goat milk soap is 
+    wonderful for people with dry or sensitive skin, </br>or conditions such as eczema and 
+    psoriasis. It is also perfect for healthy</br> skin that wants to stay that way</p>
+  </div>
+</div>
+</section>
+
+  <!--------------------Lavender------------------------>
+
+  
+  <div class="soap-lav, soap-pic" style="margin-top:5%;">
+      <img src="SV img\GS Lavender.png" style="width:250px; height:180px;">
+  
+    </div>
+    <div ng-controller="addLav" style="background:white; opacity:70%;"
+    class="our-soap-lav">
+        <h4 class="text-box">Lavender</h4>
+        <p class="text-box-soap"name="" id="" cols="70" rows="18">Patchouli, fir, rosemary, 
+          sage, and ylang ylang essential oils with pine and vanilla organic scents give this bar a forest-fresh aroma</p>
+  <div class="count-pine">
+      <div class="input-group plus-minus-input">
+    
+<div class="input-group input-number-group">
+  <div class="input-group-button">
+    <span class="input-number-decrement">-</span>
+  </div>
+  <input ng-model="quantity"class="input-number" type="number" value="0" min="0" max="1000">
+  <div class="input-group-button">
+    <span class="input-number-increment">+</span>
+  </div>
+</div>
+<button type="button" ng-click="addLav(quantity)"class="btn btn-secondary"><a style="color: white;"href="soap.html">Add to cart</a></button>
+</div>
+
+
+  </div>
+  
+  
+    </div>
+
+   <!--------------------Aspen------------------------>
+
+  <div class="soap-pine, soap-pic"style="margin-top:47px;">
+      <img src="SV img\GS Pine.png" style="width:250px; height:180px;">
+  
+    </div>
+    <div ng-controller="addAspen" style="background:white; opacity:70%;"
+    class="our-soap-pine">
+        <h4 class="text-box">Aspen</h4>
+        <p class="text-box-soap"name="" id="" cols="70" rows="18">Patchouli, fir, rosemary, 
+          sage, and ylang ylang essential oils with pine and vanilla organic scents give this bar a forest-fresh aroma</p>
+  <div class="count-pine">
+      <div class="input-group plus-minus-input">
+    
+<div class="input-group input-number-group">
+  <div class="input-group-button">
+    <span class="input-number-decrement">-</span>
+  </div>
+  <input ng-model="quantity"class="input-number" type="number" value="0" min="0" max="1000">
+  <div class="input-group-button">
+    <span class="input-number-increment">+</span>
+  </div>
+</div>
+<button type="button" ng-click="addAspen(quantity)"class="btn btn-secondary"><a style="color: white;"href="soap.html">Add to cart</a></button>
+</div>
+
+
+  </div>
+  
+  
+    </div>
+
+
+<!--------------------Honey------------------------>
+
+    <div class="soap-oats, soap-pic"style="margin-top:47px;">
+        <img src="SV img\GS Oats.png" style="width:250px; height:180px;">
+    
+      </div>
+      <div ng-controller="addHoney"style="background:white; opacity:70%;"
+      class="our-soap-oats">
+          <h4 class="text-box">Honey Oatmeal</h4>
+          <p class="text-box-soap"name="" id="" cols="70" rows="18">We added real oats 
+            and honey for an added boost of hydration and gentle exfoliation. Sarah and 
+            Savannah's favorite!</p>
+        <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+<div class="count-oats">
+        <div class="input-group plus-minus-input">
+    
+<div class="input-group input-number-group">
+  <div class="input-group-button">
+    <span class="input-number-decrement">-</span>
+  </div>
+  <input ng-model="quantity"class="input-number" type="number" value="0" min="0" max="1000">
+  <div class="input-group-button">
+    <span class="input-number-increment">+</span>
+  </div>
+</div>
+<button type="button" value="Submit" ng-click="addHoney(quantity)"data-dismiss="modal"class="btn btn-secondary">
+    <a style="color: white;"href="soap.html">Add to cart</a></button>
+</div>
+
+  </div>
+  
+  
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-------------End Script-------------->
+
+
+
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<div class="footer">
+
+    
+        <div class="text-center center-block">
+                <a href="https://www.facebook.com/SarahvannahFarms/?modal=admin_todo_tour">
+                  <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://www.instagram.com/sarahvannah_farms/">
+                  <i id="social-ig" class="fa fa-instagram fa-3x social" aria-hidden="true"></i></i></a>
+                <a href="mailto:sarahvannah.farms@gmail.com"><i id="social-em" 
+                  class="fa fa-envelope-square fa-3x social"></i></a>
+</div>
+    
+</div>
+
+<script>
+  $('.input-number-increment').click(function() {
+      var $input = $(this).parents('.input-number-group').find('.input-number');
+      var val = parseInt($input.val(), 10);
+      $input.val(val + 1);
+  });
+
+  $('.input-number-decrement').click(function() {
+      var $input = $(this).parents('.input-number-group').find('.input-number');
+      var val = parseInt($input.val(), 10);
+      $input.val(val - 1);
+  })
+</script>
+<script>
+  jQuery(document).ready(function() {
+      // This button will increment the value
+      $('[data-quantity="plus"]').click(function(e) {
+          // Stop acting like a button
+          e.preventDefault();
+          // Get the field name
+          fieldName = $(this).attr('data-field');
+          // Get its current value
+          var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+          // If is not undefined
+          if (!isNaN(currentVal)) {
+              // Increment
+              $('input[name=' + fieldName + ']').val(currentVal + 1);
+          } else {
+              // Otherwise put a 0 there
+              $('input[name=' + fieldName + ']').val(0);
+          }
+      });
+      // This button will decrement the value till 0
+      $('[data-quantity="minus"]').click(function(e) {
+          // Stop acting like a button
+          e.preventDefault();
+          // Get the field name
+          fieldName = $(this).attr('data-field');
+          // Get its current value
+          var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+          // If it isn't undefined or its greater than 0
+          if (!isNaN(currentVal) && currentVal > 0) {
+              // Decrement one
+              $('input[name=' + fieldName + ']').val(currentVal - 1);
+          } else {
+              // Otherwise put a 0 there
+              $('input[name=' + fieldName + ']').val(0);
+          }
+      });
+  });
+</script>
+
+
+
+<!-- Menu Toggle Script -->
+
+
+<script>
+  //<!-------------------------------------Add Lavender Controller------------------------->
+
+
+  var app = angular.module("POSTapp", []);
+  app.controller('addLav', function($scope, $http) {
+    $scope.quantity = '';
+
+      $scope.addLav = function(quantity) {
+          var url = 'http://localhost:8080/addLav?quantity='+quantity
+
+
+          console.log(url);
+          //Call the services
+
+          $http.post(url).then(function(response) {
+              console.log(response);
+              if (response.data)
+
+                  $scope.soap = response.data;
+              $scope.msg = "Put Data Method Executed Successfully!";
+
+          }, function(response) {
+
+              $scope.msg = "Success!";
+
+              $scope.statusval = response.status;
+
+              $scope.statustext = response.statusText;
+
+              $scope.headers = response.headers();
+
+          });
+
+      };
+
+  });
+  //<!-------------------------------------Add Aspen Controller------------------------->
+
+
+
+  app.controller('addAspen', function($scope, $http) {
+    $scope.quantity = '';
+
+      $scope.addAspen = function(quantity) {
+          var url = 'http://localhost:8080/addAspen?quantity='+quantity
+
+
+          console.log(url);
+          //Call the services
+
+          $http.post(url).then(function(response) {
+              console.log(response);
+              if (response.data)
+
+                  $scope.soap = response.data;
+              $scope.msg = "Put Data Method Executed Successfully!";
+
+          }, function(response) {
+
+              $scope.msg = "Success!";
+
+              $scope.statusval = response.status;
+
+              $scope.statustext = response.statusText;
+
+              $scope.headers = response.headers();
+
+          });
+
+      };
+
+  });
+  //<!-------------------------------------Add Honey Oat Controller------------------------->
+
+
+
+  app.controller('addHoney', function($scope, $http) {
+    $scope.quantity = '';
+
+      $scope.addHoney = function(quantity) {
+          var url = 'http://localhost:8080/addHoney?quantity='+quantity
+
+
+          console.log(url);
+          //Call the services
+
+          $http.post(url).then(function(response) {
+              console.log(response);
+              if (response.data)
+
+                  $scope.soap = response.data;
+              $scope.msg = "Put Data Method Executed Successfully!";
+
+          }, function(response) {
+
+              $scope.msg = "Success!";
+
+              $scope.statusval = response.status;
+
+              $scope.statustext = response.statusText;
+
+              $scope.headers = response.headers();
+
+          });
+
+      };
+
+  });
+</script>
+
+<script>
+  function openmenu() {
+      document.getElementById("side-menu").style.display = "block";
+      document.getElementById("menu-btn").style.display = "none";
+      document.getElementById("close-btn").style.display = "block";
+  }
+
+  function closemenu() {
+      document.getElementById("side-menu").style.display = "none";
+      document.getElementById("menu-btn").style.display = "block";
+      document.getElementById("close-btn").style.display = "none";
+  }
+</script>
+  
+
+</body>
+</html>
